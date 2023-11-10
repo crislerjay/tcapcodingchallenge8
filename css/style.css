@@ -1,0 +1,343 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+a:hover {
+  opacity: .7;
+}
+
+.txtColor01 {
+  color: hsl(230, 17%, 14%);
+}
+
+.dark-mode .txtColor01 {
+  color: hsl(0, 0%, 100%);
+}
+
+.txtColor02 {
+  color: hsl(228, 12%, 44%);
+}
+
+.dark-mode .txtColor02 {
+  color: hsl(228, 34%, 66%);
+}
+
+.cardbg {
+  background: hsl(227, 47%, 96%);
+}
+
+.dark-mode .cardbg {
+  background: hsl(228, 28%, 20%);
+}
+
+.wrap {
+  position: relative;
+  background: hsl(0, 0%, 100%);
+  font-size: 1.4rem;
+  min-height: 100vh;
+}
+
+.wrap::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 244px;
+  background: hsl(225, 100%, 98%);
+}
+
+.dark-mode .wrap {
+  position: relative;
+  background: hsl(230, 17%, 14%);
+}
+
+.dark-mode .wrap::before {
+  background: hsl(232, 19%, 15%);
+}
+
+.inner {
+  position: relative;
+  max-width: 1160px;
+  margin: auto;
+  padding: 0 25px;
+}
+
+.col04 {
+  display: -ms-grid;
+  display: grid;
+  gap: 3rem;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 39px 0 46px;
+}
+
+.ttl {
+  margin-bottom: 8px;
+  font-size: 2.8rem;
+}
+
+.titleBlock p {
+  font-size: 1.5rem;
+  letter-spacing: -0.4px;
+}
+
+.themeBlock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.themeToggle {
+  display: block;
+  width: 48px;
+  margin-left: 13px;
+  padding: 3px;
+  border-radius: 100px;
+  background: hsl(230, 22%, 74%);
+}
+
+.dark-mode .themeToggle {
+  background-image: -webkit-gradient(linear, left top, right top, from(hsl(210, 78%, 56%)), to(hsl(146, 68%, 55%)));
+  background-image: -o-linear-gradient(left, hsl(210, 78%, 56%), hsl(146, 68%, 55%));
+  background-image: linear-gradient(to right, hsl(210, 78%, 56%), hsl(146, 68%, 55%));;
+}
+
+.themeToggle span {
+  display: inline-block;
+  float: right;
+  width: 18px;
+  height: 18px;
+  border-radius: 100%;
+  background-color: #fff;
+}
+
+.dark-mode .themeToggle span {
+  background-color: hsl(232, 19%, 15%);
+}
+
+.accountCard {
+  position: relative;
+  padding: 28px 30px 24px;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.accountCard.facebook { border-top: 4px solid hsl(208, 92%, 53%); }
+.accountCard.twitter { border-top: 4px solid hsl(203, 89%, 53%); }
+.accountCard.youtube { border-top: 4px solid hsl(348, 97%, 39%); }
+.accountCard.instagram::before {
+  content: '';
+  background-image: -webkit-gradient(linear, left top, right top, from(hsl(37, 97%, 70%)), to(hsl(329, 70%, 58%)));
+  background-image: -o-linear-gradient(left, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  background-image: linear-gradient(to right, hsl(37, 97%, 70%), hsl(329, 70%, 58%));
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+}
+
+.accountName span {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1.2rem;
+}
+
+.accountName span:first-child {
+  margin-right: 8px;
+}
+
+.followersCount {
+  margin: 23px 0 7px;
+  font-size: 5.4rem;
+}
+
+.followers {
+  margin-bottom: 26px;
+  letter-spacing: 6px;
+  font-weight: 400;
+}
+
+.followersToday {
+  position: relative;
+  display: inline-block;
+  font-size: 1.2rem;
+  padding-left: 10px;
+}
+
+.followersToday.increased {
+  color: hsl(163, 72%, 41%);
+}
+
+.followersToday.increased::before {
+  content: url('../images/icon-up.svg');
+  position: absolute;
+  top: 30%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.followersToday.decreased {
+  color: hsl(356, 69%, 56%);
+}
+
+.followersToday.decreased::before {
+  content: url('../images/icon-down.svg');
+  position: absolute;
+  top: 30%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+          transform: translateY(-50%);
+}
+
+.overViewBlock {
+  margin-top: 50px;
+}
+
+.ttl02 {
+  margin-bottom: 25px;
+  font-size: 2.4rem;
+  color: hsl(228, 12%, 44%);
+}
+
+.dark-mode .ttl02 {
+  color: hsl(0, 0%, 100%);
+}
+
+.overviewCard {
+  position: relative;
+  padding: 30px 25px 24px;
+  text-decoration: none;
+}
+
+.overviewCard::before {
+  position: absolute;
+  top: 26px;
+  right: 31px;
+}
+
+.overviewCard.facebook::before {
+  content: url('../images/icon-facebook.svg');
+}
+
+.overviewCard.instagram::before {
+  content: url('../images/icon-instagram.svg');
+}
+
+.overviewCard.twitter::before {
+  content: url('../images/icon-twitter.svg');
+}
+
+.overviewCard.youtube::before {
+  content: url('../images/icon-youtube.svg');
+}
+
+.percentage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 27px;
+}
+
+.percentage .txtColor01 {
+  font-size: 3rem;
+}
+
+@media screen and (max-width:768px) {
+  .wrap {
+    padding-bottom: 20px;
+  }
+
+  .header {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: unset;
+        -ms-flex-align: unset;
+            align-items: unset;
+    padding: 39px 0 40px;
+  }
+
+  .ttl {
+    font-size: 2.4rem;
+  }
+
+  .titleBlock {
+    padding-bottom: 24px;
+    border-bottom: 1px solid hsl(228, 12%, 44%);
+  }
+
+  .dark-mode .titleBlock {
+    border-bottom: 1px solid hsl(228, 34%, 66%);
+  }
+
+  .themeBlock {
+    margin-top: 16px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .overViewBlock {
+    margin-top: 33px;
+  }
+
+  .ttl02 {
+    margin-bottom: 28px;
+  }
+}
+
+@media screen and (max-width:580px) {
+  .accountsBlock.col04 {
+    gap: 2.4rem;
+  }
+
+  .overview.col04 {
+    gap: 1.6rem;
+  }
+}
