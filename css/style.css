@@ -242,6 +242,7 @@ a:hover {
 .overviewCard {
   position: relative;
   padding: 30px 25px 24px;
+  border-radius: 5px;
   text-decoration: none;
 }
 
